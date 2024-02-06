@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 type Memoized func(int) int
-var fibMem Memoized
+var fibMem = Memoized(fib)
 
 func main() {
-	fmt.Print(fib(5))
+	fmt.Print(FibMemoized(5))
 }
 
 func FibMemoized(n int) int {
